@@ -1,0 +1,8 @@
+[2020.12.02 13:20:34] I Initializing report manager.
+[2020.12.02 13:20:34] I Searching last log file.
+[2020.12.02 13:20:34] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.02 13:20:34] I Loading template.
+[2020.12.02 13:20:34] I Getting urls data.
+[2020.12.02 14:40:59] I Successfully parsed > parsed_lines_count=2382
+[2020.12.02 14:40:59] I Report prepared.
+[2020.12.02 14:40:59] I Report created.
