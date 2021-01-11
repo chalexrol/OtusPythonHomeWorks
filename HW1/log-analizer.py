@@ -34,27 +34,44 @@ config = {
 
 
 def start_logging(parsed_config):
+    """
+    Set up basic logging config
+    :param parsed_config: It's default config plus options from config file
+    """
     logging.basicConfig(filename=parsed_config.get('LOG_PATH', None),
                         format='[%(asctime)s] %(levelname).1s %(message)s', datefmt='%Y.%m.%d %H:%M:%S',
                         level=logging.INFO)
 
 
 def get_config(file_name=None):
+    """
+    Read and parse config file and add options into result_config
+    :param file_name:
+    :return: result_config: It's default config plus options from config file
+    """
     result_config = copy.deepcopy(config)
+
     if file_name:
         try:
             with open(file_name, 'r') as config_file:
                 parsed_config = json.load(config_file)
         except FileNotFoundError:
-            logging.exception(f'File {file_name} not found.')
+            logging.exception("File "+file_name+" not found.")
         except JSONDecodeError:
-            logging.exception(f'File {file_name} content cannot be decoded.')
+            logging.exception("File "+file_name+" content cannot be decoded.")
             raise
         result_config.update(parsed_config)
     return result_config
 
 
 def get_parsed_args():
+    """
+    Parser for command-line options.
+    With custom config file:
+    python3 log-analyzer.py --config my_config.json
+    :return:
+    file name after options "--config" or default("config.json")
+    """
     arg_parser = argparse.ArgumentParser(description='Parses nginx log file and generates report.')
     arg_parser.add_argument('--config', default='config.json', help='Path to the config file.')
     return arg_parser.parse_args()
@@ -63,7 +80,7 @@ def get_parsed_args():
 def main():
     args = get_parsed_args()
     custom_config = get_config(args.config)
-
+    
     start_logging(custom_config)
 
     logging.info('Initializing report manager.')

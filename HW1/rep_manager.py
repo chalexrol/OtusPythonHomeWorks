@@ -20,6 +20,11 @@ class UrlsData:
         self.all_request_time = 0
 
     def add_count(self, url, request_time):
+        """
+        Add request count and sum request time
+        :param url: URL from log
+        :param request_time: request time from log
+        """
         self.all_request_count += 1
         self.all_request_time += request_time
         try:
@@ -28,6 +33,10 @@ class UrlsData:
             self.request_time[url] = [request_time]
 
     def as_json(self):
+        """
+        Prepare data for report
+        :return: data for will write report file
+        """
         data = []
         for url, request_time_list in self.request_time.items():
             call_times = len(request_time_list)
@@ -67,18 +76,40 @@ class BaseRepManager:
         self.config = config
 
 
+def log_file_data_analyser(log_file_data, last_log_file_data):
+    """
+    Find last log file into dir
+    :param log_file_data: one filename from log directory
+    :param last_log_file_data: on the first step 'None'
+    :return: the most recent log filename
+    """
+    if log_file_data:
+        if not last_log_file_data:
+            last_log_file_data = log_file_data
+        else:
+            if last_log_file_data.date < log_file_data.date:
+                last_log_file_data = log_file_data
+    return last_log_file_data
+
+
 class NginxRepManager(BaseRepManager):
     log_re = re.compile(
         r'(.+?) (.+?) {2}(.+?) \[(.+?)\] "((.*?) (.*?)(\?.*)? (.*?))?" (.+?) (.+?) "(.*?)" "(.*?)" "(.*?)" "(.*?)" (.+) (.+)')
 
     @staticmethod
     def get_log_file_data(file_name, regex=None):
+        """
+        Get Date log file
+        :param file_name:
+        :param regex:
+        :return: Tuple: file name, Date, Zip(True/False)
+        """
         regex = regex or r'nginx-access-ui\.log-(\d+)(\.gz)?'
         result = re.match(regex, file_name)
         if result:
             date_string = result.group(1)
             try:
-                date = datetime.strptime(date_string, '%Y%m%d')
+                date = datetime.strptime(date_string, '%Y%m%d').replace(tzinfo=None)
             except ValueError:
                 return None
             is_zip = bool(result.group(2))
@@ -86,6 +117,11 @@ class NginxRepManager(BaseRepManager):
 
     @staticmethod
     def get_last_log_file(log_dir):
+        """
+        Search last log file
+        :param log_dir: default (./nginx_log)
+        :return: Last log file data
+        """
         logging.info('Searching last log file.')
         last_log_file_data = None
 
@@ -95,24 +131,30 @@ class NginxRepManager(BaseRepManager):
             logging.exception('Nginx log directory not found > log_dir=%s', log_dir)
             raise
         else:
+
             for file_name in file_names:
                 log_file_data = NginxRepManager.get_log_file_data(file_name)
-                if log_file_data:
-                    if not last_log_file_data:
-                        last_log_file_data = log_file_data
-                    else:
-                        if last_log_file_data.date < log_file_data.date:
-                            last_log_file_data = log_file_data
+                last_log_file_data = log_file_data_analyser(log_file_data, last_log_file_data)
         return last_log_file_data
 
     @staticmethod
     def get_file_line_count(opener, full_path):
-        file = opener(full_path)
-        line_count = sum(1 for _ in file)
-        file.close()
+        """
+        File line count
+        :param opener:
+        :param full_path:
+        :return: line count
+        """
+        nginx_file = opener(full_path)
+        line_count = sum(1 for _ in nginx_file)
+        nginx_file.close()
         return line_count
 
     def get_urls_data(self):
+        """
+        Parse data from log/gz and collect all info about request time for each URL
+        :return: sorted request time for each URL
+        """
         logging.info('Getting urls data.')
         full_path = f'{self.config["LOG_DIR"]}/{self.log_file_data.file_name}'
 
@@ -139,6 +181,10 @@ class NginxRepManager(BaseRepManager):
         return urls_data
 
     def get_template(self):
+        """
+        Loading report template
+        :return: Template
+        """
         logging.info('Loading template.')
         template_path = f'{self.config["TEMPLATES_DIR"]}/{self.config["REPORT_TEMPLATE_FILE"]}'
         try:
@@ -150,6 +196,9 @@ class NginxRepManager(BaseRepManager):
         return Template(report_template)
 
     def prepare_report(self):
+        """
+        Prepare report
+        """
         if not self.template_with_data:
             urls_data = self.get_urls_data()
             self.template_with_data = self.template.safe_substitute(table_json=urls_data.as_json())
@@ -158,6 +207,10 @@ class NginxRepManager(BaseRepManager):
             logging.info('Report already prepared.')
 
     def prepare_and_save_report(self):
+        """
+        Prepare and save report
+
+        """
         if not self.is_report_exist():
             if not self.template_with_data:
                 self.prepare_report()
@@ -168,6 +221,10 @@ class NginxRepManager(BaseRepManager):
             logging.info('Report already exist.')
 
     def is_report_exist(self):
+        """
+        Check the report
+        :return: Report exist or not
+        """
         os.makedirs(self.config['REPORT_DIR'], exist_ok=True)
         return os.path.exists(self.report_path)
 
