@@ -94,7 +94,7 @@ def log_file_data_analyser(log_file_data, last_log_file_data):
 
 class NginxRepManager(BaseRepManager):
     log_re = re.compile(
-        r'(.+?) (.+?) {2}(.+?) \[(.+?)\] "((.*?) (.*?)(\?.*)? (.*?))?" (.+?) (.+?) "(.*?)" "(.*?)" "(.*?)" "(.*?)" (.+) (.+)')
+r'(.+?) (.+?) {2}(.+?) \[(.+?)\] "((.*?) (.*?)(\?.*)? (.*?))?" (.+?) (.+?) "(.*?)" "(.*?)" "(.*?)" "(.*?)" (.+) (.+)')
 
     @staticmethod
     def get_log_file_data(file_name, regex=None):
