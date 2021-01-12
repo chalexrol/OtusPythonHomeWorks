@@ -1,0 +1,182 @@
+[2020.12.02 13:20:34] I Initializing report manager.
+[2020.12.02 13:20:34] I Searching last log file.
+[2020.12.02 13:20:34] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.02 13:20:34] I Loading template.
+[2020.12.02 13:20:34] I Getting urls data.
+[2020.12.02 14:40:59] I Successfully parsed > parsed_lines_count=2382
+[2020.12.02 14:40:59] I Report prepared.
+[2020.12.02 14:40:59] I Report created.
+[2020.12.24 11:15:14] I Initializing report manager.
+[2020.12.24 11:15:14] I Searching last log file.
+[2020.12.24 11:15:14] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 11:15:14] I Loading template.
+[2020.12.24 11:15:14] I Getting urls data.
+[2020.12.24 11:15:15] I Successfully parsed > parsed_lines_count=2382
+[2020.12.24 11:15:15] I Report prepared.
+[2020.12.24 11:15:15] I Report created.
+[2020.12.24 14:16:39] I Initializing report manager.
+[2020.12.24 14:16:39] I Searching last log file.
+[2020.12.24 14:16:39] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 14:16:39] I Loading template.
+[2020.12.24 14:16:39] I Report already exist.
+[2020.12.24 14:25:33] I Initializing report manager.
+[2020.12.24 14:25:33] I Searching last log file.
+[2020.12.24 14:25:33] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 14:25:33] I Loading template.
+[2020.12.24 14:25:33] I Report already exist.
+[2020.12.24 20:36:28] I Initializing report manager.
+[2020.12.24 20:36:28] I Searching last log file.
+[2020.12.24 20:36:28] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 20:36:28] I Loading template.
+[2020.12.24 20:36:28] I Report already exist.
+[2020.12.24 20:36:56] I Initializing report manager.
+[2020.12.24 20:36:56] I Searching last log file.
+[2020.12.24 20:36:56] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 20:36:56] I Loading template.
+[2020.12.24 20:36:56] I Getting urls data.
+[2020.12.24 20:36:56] I Successfully parsed > parsed_lines_count=2382
+[2020.12.24 20:36:56] I Report prepared.
+[2020.12.24 20:36:56] I Report created.
+[2020.12.24 20:37:23] I Initializing report manager.
+[2020.12.24 20:37:23] I Searching last log file.
+[2020.12.24 20:37:23] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 20:37:23] I Loading template.
+[2020.12.24 20:37:23] I Report already exist.
+[2020.12.24 20:43:53] I Initializing report manager.
+[2020.12.24 20:44:38] I Searching last log file.
+[2020.12.24 20:46:42] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 20:46:48] I Loading template.
+[2020.12.24 20:47:57] I Report already exist.
+[2020.12.24 21:16:54] I Initializing report manager.
+[2020.12.24 21:16:54] I Searching last log file.
+[2020.12.24 21:16:54] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 21:16:54] I Loading template.
+[2020.12.24 21:16:54] I Report already exist.
+[2020.12.24 21:55:52] I Initializing report manager.
+[2020.12.24 21:55:52] I Searching last log file.
+[2020.12.24 21:55:52] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 21:55:52] I Loading template.
+[2020.12.24 21:55:52] I Getting urls data.
+[2020.12.24 21:55:52] I Successfully parsed > parsed_lines_count=2382
+[2020.12.24 21:55:52] I Report prepared.
+[2020.12.24 21:55:52] I Report created.
+[2020.12.24 22:52:13] I Initializing report manager.
+[2020.12.24 22:54:35] I Searching last log file.
+[2020.12.24 22:58:51] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.24 22:59:03] I Loading template.
+[2020.12.24 23:02:52] I Getting urls data.
+[2020.12.28 12:30:30] I Successfully parsed > parsed_lines_count=2382
+[2020.12.28 12:32:58] I Report prepared.
+[2020.12.28 12:33:25] I Report created.
+[2020.12.28 13:29:05] I Initializing report manager.
+[2020.12.28 13:29:05] I Searching last log file.
+[2020.12.28 13:29:05] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.28 13:29:05] I Loading template.
+[2020.12.28 13:29:05] I Report already exist.
+[2020.12.28 13:29:32] I Initializing report manager.
+[2020.12.28 13:29:32] I Searching last log file.
+[2020.12.28 13:29:32] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.28 13:29:32] I Loading template.
+[2020.12.28 13:29:32] I Getting urls data.
+[2020.12.28 13:35:49] I Initializing report manager.
+[2020.12.28 13:35:49] I Searching last log file.
+[2020.12.28 13:35:49] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.28 13:35:49] I Loading template.
+[2020.12.28 14:25:10] I Initializing report manager.
+[2020.12.28 14:25:10] I Searching last log file.
+[2020.12.28 14:42:12] I Initializing report manager.
+[2020.12.28 14:42:12] I Searching last log file.
+[2020.12.28 14:58:02] I Initializing report manager.
+[2020.12.28 14:58:02] I Searching last log file.
+[2020.12.28 14:58:08] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.28 14:58:08] I Loading template.
+[2020.12.28 15:18:01] I Getting urls data.
+[2020.12.28 15:18:05] I Successfully parsed > parsed_lines_count=2382
+[2020.12.28 15:18:07] I Report prepared.
+[2020.12.28 15:18:07] I Report created.
+[2020.12.29 17:18:22] I Initializing report manager.
+[2020.12.29 17:18:22] I Searching last log file.
+[2020.12.29 17:18:22] E Unexpected error.
+Traceback (most recent call last):
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 92, in <module>
+    main()
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 86, in main
+    rep_manager = NginxRepManager(config)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 221, in __init__
+    self.log_file_data = self.get_last_log_file(self.config['LOG_DIR'])
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 119, in get_last_log_file
+    log_file_data = NginxRepManager.get_log_file_data(file_name)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 96, in get_log_file_data
+    date = datetime.strptime(date_string, '%Y%m%d').tzinfo()
+TypeError: 'NoneType' object is not callable
+[2020.12.29 17:18:33] I Initializing report manager.
+[2020.12.29 17:18:33] I Searching last log file.
+[2020.12.29 17:18:33] E Unexpected error.
+Traceback (most recent call last):
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 92, in <module>
+    main()
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 86, in main
+    rep_manager = NginxRepManager(config)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 221, in __init__
+    self.log_file_data = self.get_last_log_file(self.config['LOG_DIR'])
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 119, in get_last_log_file
+    log_file_data = NginxRepManager.get_log_file_data(file_name)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 96, in get_log_file_data
+    date = datetime.strptime(date_string, '%Y%m%d').tzinfo()
+TypeError: 'NoneType' object is not callable
+[2020.12.29 17:19:07] I Initializing report manager.
+[2020.12.29 17:19:07] I Searching last log file.
+[2020.12.29 17:19:07] E Unexpected error.
+Traceback (most recent call last):
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 92, in <module>
+    main()
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 86, in main
+    rep_manager = NginxRepManager(config)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 221, in __init__
+    self.log_file_data = self.get_last_log_file(self.config['LOG_DIR'])
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 119, in get_last_log_file
+    log_file_data = NginxRepManager.get_log_file_data(file_name)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 96, in get_log_file_data
+    date = datetime.strptime(date_string, '%Y%m%d').tzinfo()
+TypeError: 'NoneType' object is not callable
+[2020.12.29 17:19:20] I Initializing report manager.
+[2020.12.29 17:19:20] I Searching last log file.
+[2020.12.29 17:19:20] E Unexpected error.
+Traceback (most recent call last):
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 92, in <module>
+    main()
+  File "C:/Users/Alex Chukhvantsev/Documents/OTUS/OtusPythonHomeWorks/HW1/log-analizer.py", line 86, in main
+    rep_manager = NginxRepManager(config)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 221, in __init__
+    self.log_file_data = self.get_last_log_file(self.config['LOG_DIR'])
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 119, in get_last_log_file
+    log_file_data = NginxRepManager.get_log_file_data(file_name)
+  File "C:\Users\Alex Chukhvantsev\Documents\OTUS\OtusPythonHomeWorks\HW1\rep_manager.py", line 96, in get_log_file_data
+    date = datetime.strptime(date_string, '%Y%m%d').tzinfo()
+TypeError: 'NoneType' object is not callable
+[2020.12.29 17:22:35] I Initializing report manager.
+[2020.12.29 17:22:35] I Searching last log file.
+[2020.12.29 17:23:05] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.29 17:23:05] I Loading template.
+[2020.12.29 17:23:08] I Getting urls data.
+[2020.12.29 17:23:10] I Successfully parsed > parsed_lines_count=2382
+[2020.12.29 17:23:10] I Report prepared.
+[2020.12.29 17:23:10] I Report created.
+[2020.12.29 23:01:16] I Initializing report manager.
+[2020.12.29 23:01:16] I Searching last log file.
+[2020.12.29 23:01:16] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.29 23:01:16] I Loading template.
+[2020.12.29 23:01:16] I Report already exist.
+[2020.12.29 23:14:31] I Initializing report manager.
+[2020.12.29 23:14:31] I Searching last log file.
+[2020.12.29 23:14:31] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2020.12.29 23:14:31] I Loading template.
+[2020.12.29 23:14:31] I Report already exist.
+[2021.01.11 11:55:08] I Initializing report manager.
+[2021.01.11 11:55:08] I Searching last log file.
+[2021.01.11 11:55:37] I Found log file > log_file_name=nginx-access-ui.log-20170101.log
+[2021.01.11 11:55:37] I Loading template.
+[2021.01.11 11:55:40] I Getting urls data.
+[2021.01.11 11:55:43] I Successfully parsed > parsed_lines_count=2382
+[2021.01.11 11:55:46] I Report prepared.
+[2021.01.11 11:55:46] I Report created.
