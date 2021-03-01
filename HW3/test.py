@@ -28,10 +28,10 @@ class TestSuite(unittest.TestCase):
 
     def set_valid_auth(self, request):
         if request.get("login") == api.ADMIN_LOGIN:
-            request["token"] = hashlib.sha512(datetime.datetime.now().strftime("%Y%m%d%H") + api.ADMIN_SALT).hexdigest()
+            request["token"] = hashlib.sha512((datetime.datetime.now().strftime("%Y%m%d%H") + api.ADMIN_SALT).encode('utf-8')).hexdigest()
         else:
             msg = request.get("account", "") + request.get("login", "") + api.SALT
-            request["token"] = hashlib.sha512(msg).hexdigest()
+            request["token"] = hashlib.sha512(msg.encode('utf-8')).hexdigest()
 
     def test_empty_request(self):
         _, code = self.get_response({})
@@ -59,6 +59,8 @@ class TestSuite(unittest.TestCase):
 
     @cases([
         {},
+        {"phone": ""},
+        {"phone": "abcdef"},
         {"phone": "79175002040"},
         {"phone": "89175002040", "email": "stupnikov@otus.ru"},
         {"phone": "79175002040", "email": "stupnikovotus.ru"},
@@ -71,6 +73,7 @@ class TestSuite(unittest.TestCase):
          "first_name": "s", "last_name": 2},
         {"phone": "79175002040", "birthday": "01.01.2000", "first_name": "s"},
         {"email": "stupnikov@otus.ru", "gender": 1, "last_name": 2},
+        {"phone": "79175002040", "birthday": "01.01.2000", "first_name": "s"},
     ])
     def test_invalid_score_request(self, arguments):
         request = {"account": "horns&hoofs", "login": "h&f", "method": "online_score", "arguments": arguments}
@@ -114,6 +117,8 @@ class TestSuite(unittest.TestCase):
         {"client_ids": {1: 2}, "date": "20.07.2017"},
         {"client_ids": ["1", "2"], "date": "20.07.2017"},
         {"client_ids": [1, 2], "date": "XXX"},
+        {"client_ids": [1, 2], "date": "20202364"},
+        {"client_ids": [1, 2], "date": "20.20.2035"},
     ])
     def test_invalid_interests_request(self, arguments):
         request = {"account": "horns&hoofs", "login": "h&f", "method": "clients_interests", "arguments": arguments}
@@ -133,7 +138,7 @@ class TestSuite(unittest.TestCase):
         response, code = self.get_response(request)
         self.assertEqual(api.OK, code, arguments)
         self.assertEqual(len(arguments["client_ids"]), len(response))
-        self.assertTrue(all(v and isinstance(v, list) and all(isinstance(i, basestring) for i in v)
+        self.assertTrue(all(v and isinstance(v, list) and all(isinstance(i, str) for i in v)
                         for v in response.values()))
         self.assertEqual(self.context.get("nclients"), len(arguments["client_ids"]))
 
